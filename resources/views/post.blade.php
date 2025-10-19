@@ -33,5 +33,5 @@
                 <p class="text-neutral-content">{{ $comment->created_at->diffForHumans() }}</p>
             </div>
         </div>
-    @endforeachw
+    @endforeach
 @endsection
