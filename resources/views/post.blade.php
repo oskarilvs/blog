@@ -18,7 +18,9 @@
         <div class="card-body">
             <h2 class="card-title">{{ $post->title }}</h2>
             <p>{!! $post->displayBody !!}</p>
-            <p class="text-neutral-content">{{ $post->user->name }}</p>
+            <p class="text-neutral-content">
+                <a href="{{ route('user.posts', ['user' => $post->user]) }}" class="link link-hover">{{ $post->user->name }}</a>
+            </p>
             <p class="text-neutral-content">{{ $post->created_at->diffForHumans() }}</p>
             <div class="card-actions justify-end">
 
@@ -29,7 +31,9 @@
         <div class="card bg-base-300 shadow-sm mt-3">
             <div class="card-body">
                 <p>{{ $comment->body }}</p>
-                <p class="text-neutral-content">{{ $comment->user->name }}</p>
+                <p class="text-neutral-content">
+                    <a href="{{ route('user.posts', ['user' => $comment->user]) }}" class="link link-hover">{{ $comment->user->name }}</a>
+                </p>
                 <p class="text-neutral-content">{{ $comment->created_at->diffForHumans() }}</p>
             </div>
         </div>

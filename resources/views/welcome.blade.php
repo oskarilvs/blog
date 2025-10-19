@@ -23,7 +23,9 @@
                 <div class="card-body">
                     <h2 class="card-title">{{ $post->title }}</h2>
                     <p>{{ $post->snippet }}</p>
-                    <p class="text-neutral-content">{{ $post->user->name }}</p>
+                    <p class="text-neutral-content">
+                        <a href="{{ route('user.posts', ['user' => $post->user]) }}" class="link link-hover">{{ $post->user->name }}</a>
+                    </p>
                     <p class="text-neutral-content">{{ $post->created_at->diffForHumans() }}</p>
                     <p class="text-neutral-content"><b>Comments:</b> {{ $post->comments_count }}</p>
                     <p class="text-neutral-content"><b>Likes:</b> {{ $post->likes_count }}</p>
