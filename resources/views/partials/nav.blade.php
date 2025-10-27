@@ -14,7 +14,7 @@
                 <a>Admin</a>
                 <ul class="p-2">
                     <li><a href="{{ route('posts.index') }}">Posts</a></li>
-                    <li><a>Submenu 2</a></li>
+                    <li><a href="{{ route('tags.index') }}">Tags</a></li>
                 </ul>
             </li>
         @endauth
@@ -33,7 +33,7 @@
             <summary>Admin</summary>
             <ul class="p-2 z-1">
                 <li><a href="{{ route('posts.index') }}">Posts</a></li>
-                <li><a>Submenu 2</a></li>
+                <li><a href="{{ route('tags.index') }}">Tags</a></li>
             </ul>
             </details>
         </li>
